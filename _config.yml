@@ -147,7 +147,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "https://letoailog.github.io/"
+baseurl:
 
 # ------------ The following options are not recommended to be modified ------------------
 
@@ -194,7 +194,7 @@ defaults:
       swcache: true
 
 sass:
-  style: _sass
+  style: compressed
 
 compress_html:
   clippings: all
