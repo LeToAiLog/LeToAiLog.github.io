@@ -1,0 +1,405 @@
+[33mcommit 4f348877c73963ea259f0a6790914074f84c65d1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: wnsdud5645 <70627303+wnsdud5645@users.noreply.github.com>
+Date:   Wed Apr 17 20:45:44 2024 +0900
+
+    LeToAi : _config.yml update
+
+[33mcommit fe7afa379f0af0ca98a207f85bdc0fa98575b1ad[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Wed Apr 17 06:10:01 2024 +0800
+
+    perf: replace jQuery with Vanilla JS (#1681)
+    
+    Also replaced `magnific-popup` with `GLightbox`
+
+[33mcommit c85e9e239491dfafea83b68660807e6675edce44[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Wed Apr 17 06:00:36 2024 +0800
+
+    ci: avoid trigger redundant workflows (#1682)
+    
+    CodeQL and Sytle Lint
+
+[33mcommit bf16d6039ad8e6f9698c45b924725368a1d9d79d[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Apr 14 05:15:27 2024 +0800
+
+    ci(release): replace `standard-version` with `semantic-release` (#1666)
+    
+    [`standard-version`](https://github.com/conventional-changelog/standard-version/) has been deprecated since May 2022, so it is necessary to stop using it for this project.
+    
+    [**`semantic-release`**](https://github.com/semantic-release/semantic-release) is available as a more capable alternative to help automate the release process:
+    
+    1. Updating Node/Gem version numbers
+    2. Generating changelogs
+    3. Automating GitHub Releases
+    4. Building Chirpy-gem and pushing it to RubyGems.org
+    5. Create commits and tags on the `production` branch
+    6. Merge the `production` branch into the `master` branch
+    
+    > ⚠️ Note: Step _6_ may be canceled in CD environments due to merge conflicts, so we need to do this step manually in such cases.
+    
+    Whenever a commit is pushed to the release branch (`production`), all of the above release processes will be triggered.
+
+[33mcommit 8c1be9f2f38606a82925585dc8ad2bc36df8e6d5[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Apr 14 05:06:06 2024 +0800
+
+    ci: fix checkout depth for commitlint
+
+[33mcommit 7808ee157c7714e88e3ae2b504ae8a2961a02ec6[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Apr 14 04:45:52 2024 +0800
+
+    chore: move starter workflow into subfolder
+    
+    The `.hook` suffix does not make it easy to maintain code in the editor
+
+[33mcommit 1914c786a0bdd00ac15db4de45709f31e20e6010[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Apr 14 04:40:01 2024 +0800
+
+    docs: add missing head to changelog
+
+[33mcommit 44f552cbcee83d037de0e59496bf6bb19eea2691[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Apr 14 04:34:32 2024 +0800
+
+    feat(deps): move `MathJax` configuration to a separate file (#1670)
+    
+    Move `MathJax` configuration to file `assets/js/data/mathjax.js` will help add extensions.
+
+[33mcommit 7d48d32c7b272c48f1ce76dc3dc7f6ebf09468b4[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Apr 14 04:16:15 2024 +0800
+
+    ci: avoid duplicate builds for PR commits
+
+[33mcommit 9f8aeaadbfef9967a9b0a9dd323d8bed46e14d9f[m
+Author: Azamat Mambetov <zikbest11@yandex.ru>
+Date:   Sat Apr 13 00:34:48 2024 +0400
+
+    refactor!: rename media-url file and related parameters (#1651)
+    
+    - Changed variable `img_cdn` to `cdn` in site configuration file.
+    - Changed the variable defining the relative path of the image in the post from `img_url` to `media_subpath`
+
+[33mcommit 61bdca2db45179cd0d1b4b885a4c4864e3ffa3c1[m
+Author: Filippo <il_doc@protonmail.com>
+Date:   Tue Apr 9 16:57:06 2024 +0200
+
+    feat(analytics): add Umami and Matomo tracking codes (#1658)
+
+[33mcommit 23be4162b3f8598db14dc5b39726932ccf2cdc23[m
+Author: Azamat Mambetov <zikbest11@yandex.ru>
+Date:   Thu Apr 4 20:54:50 2024 +0400
+
+    feat(media): support audio and video tag with multi sources (#1618)
+
+[33mcommit 01076cb1c27ceea3b0f55ff9934933714e2f71d5[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Wed Apr 3 05:14:33 2024 +0800
+
+    build(deps-dev): bump the npm group with 2 updates
+    
+    Updates `rollup` to 4.13.2
+    - [Release notes](https://github.com/rollup/rollup/releases)
+    - [Changelog](https://github.com/rollup/rollup/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/rollup/rollup/compare/v4.13.0...v4.13.2)
+    
+    Updates `stylelint` to 16.3.1
+    - [Release notes](https://github.com/stylelint/stylelint/releases)
+    - [Changelog](https://github.com/stylelint/stylelint/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/stylelint/stylelint/compare/16.2.1...16.3.1)
+
+[33mcommit 3cc1510071f4933dc403136191dadb404896e053[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Wed Apr 3 05:12:44 2024 +0800
+
+    build(deps): update `wagoid/commitlint-github-action` from 5 to 6
+    
+    Bumps the gh-actions group with 1 update: [wagoid/commitlint-github-action](https://github.com/wagoid/commitlint-github-action).
+    
+    Updates `wagoid/commitlint-github-action` from 5 to 6
+    - [Changelog](https://github.com/wagoid/commitlint-github-action/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/wagoid/commitlint-github-action/compare/v5...v6)
+
+[33mcommit 950839175ab232103f6127fd6a99ac724ecc9e89[m
+Author: Mascari4615 <55438621+Mascari4615@users.noreply.github.com>
+Date:   Mon Mar 25 01:57:43 2024 +0900
+
+    refactor: fix reference to comment parameter `site.comments.provider` (#1629)
+
+[33mcommit 13bf51e03d2a3f8572614a3f8bbd57de69a012d8[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Mar 24 02:35:48 2024 +0800
+
+    chore(editor): update markdown extension settings
+
+[33mcommit ce96d7e251f86607c7b9d959e55f81797c2890f3[m
+Merge: c5d5e1f 7a7818b
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Mar 24 02:31:04 2024 +0800
+
+    Merge branch 'production'
+
+[33mcommit 7a7818b579d23bf53bbfdbe92a560599cba63deb[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Mar 24 02:31:02 2024 +0800
+
+    chore(release): 6.5.5
+
+[33mcommit cef8a9738432d074e0fcefb9084c3e0d211742dc[m
+Merge: e559452 2d649aa
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Mar 24 02:31:00 2024 +0800
+
+    Merge branch 'hotfix/6.5.5' into production
+
+[33mcommit 2d649aae0e40a24db1ab0d46fa474294e96cb135[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Mar 24 02:28:28 2024 +0800
+
+    fix(post): correct the image URLs (#1627)
+
+[33mcommit b7aa05d03a075fd91f7c5cd15c8bfc4cda36f4c2[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sun Mar 24 02:26:58 2024 +0800
+
+    docs: add `v6.5.3` changelog
+
+[33mcommit c5d5e1f75ae55a2550589a41b4a54fde308a0e4f[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sat Mar 23 08:01:23 2024 +0800
+
+    build(deps-dev): bump the npm group with 7 updates
+    
+    Updates `@babel/core` to 7.24.3
+    - [Release notes](https://github.com/babel/babel/releases)
+    - [Changelog](https://github.com/babel/babel/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/babel/babel/commits/v7.24.3/packages/babel-core)
+    
+    Updates `@babel/plugin-transform-class-properties` to 7.24.1
+    - [Release notes](https://github.com/babel/babel/releases)
+    - [Changelog](https://github.com/babel/babel/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/babel/babel/commits/v7.24.1/packages/babel-plugin-transform-class-properties)
+    
+    Updates `@babel/preset-env` to 7.24.3
+    - [Release notes](https://github.com/babel/babel/releases)
+    - [Changelog](https://github.com/babel/babel/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/babel/babel/commits/v7.24.3/packages/babel-preset-env)
+    
+    Updates `@commitlint/cli` to 19.2.1
+    - [Release notes](https://github.com/conventional-changelog/commitlint/releases)
+    - [Changelog](https://github.com/conventional-changelog/commitlint/blob/master/@commitlint/cli/CHANGELOG.md)
+    - [Commits](https://github.com/conventional-changelog/commitlint/commits/v19.2.1/@commitlint/cli)
+    
+    Updates `@commitlint/config-conventional` to 19.1.0
+    - [Release notes](https://github.com/conventional-changelog/commitlint/releases)
+    - [Changelog](https://github.com/conventional-changelog/commitlint/blob/master/@commitlint/config-conventional/CHANGELOG.md)
+    - [Commits](https://github.com/conventional-changelog/commitlint/commits/v19.1.0/@commitlint/config-conventional)
+    
+    Updates `rollup` to 4.13.0
+    - [Release notes](https://github.com/rollup/rollup/releases)
+    - [Changelog](https://github.com/rollup/rollup/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/rollup/rollup/compare/v4.12.0...v4.13.0)
+    
+    Updates `rollup-plugin-license` to 3.3.1
+    - [Changelog](https://github.com/mjeanroy/rollup-plugin-license/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/mjeanroy/rollup-plugin-license/compare/v3.2.0...v3.3.1)
+
+[33mcommit 319a082940ea226da6e351217e71c278ec76157a[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sat Mar 23 03:52:13 2024 +0800
+
+    refactor(post): reduce the margin between title and description
+
+[33mcommit 6044df4ff194f86c954a18c992b2303b6abdd1e4[m
+Merge: 700fd5b e559452
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sat Mar 23 03:42:00 2024 +0800
+
+    Merge branch 'production'
+
+[33mcommit e5594525e74c33a5a9343921b6546357d688aa82[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sat Mar 23 03:41:58 2024 +0800
+
+    chore(release): 6.5.4
+
+[33mcommit e15eaaffe06c32edcf704773a053fcb1ab5ae1eb[m
+Merge: 0a6c1fb 74cf57a
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sat Mar 23 03:41:54 2024 +0800
+
+    Merge branch 'hotfix/6.5.4' into production
+
+[33mcommit 74cf57aaacf6674057e6f33240a22f4888cfe88f[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sat Mar 23 03:32:03 2024 +0800
+
+    fix(seo): correct social preview image path inside `<meta>` tag (#1623)
+
+[33mcommit cfe44f204bcec8e05f498512ec50878e626a124f[m
+Author: Alexander Fuks <kungfux@users.noreply.github.com>
+Date:   Fri Mar 22 22:56:19 2024 +0400
+
+    fix: correct the attribute for the Twitter social image (#1615)
+
+[33mcommit 700fd5bad7272dd950f861e8550215cd8fafb413[m
+Author: GetOutOfMyBakery <12701930+GetOutOfMyBakery@users.noreply.github.com>
+Date:   Mon Mar 18 11:08:05 2024 +0000
+
+    feat: add support for giscus strict title matching (#1614)
+
+[33mcommit 8e5fbb7a74d04a4b3cdde69bcc821f8ccd1a3bc0[m
+Author: Small Long <910.long@gmail.com>
+Date:   Mon Mar 18 19:54:37 2024 +0900
+
+    fix: use `https` for Weibo sharing URL (#1612)
+
+[33mcommit 834931486dc3e5ed544ce4ff47cd1b2bc45f42fd[m
+Author: Azamat Mambetov <zikbest11@yandex.ru>
+Date:   Mon Mar 18 14:52:33 2024 +0400
+
+    feat: display theme version in footer (#1611)
+
+[33mcommit f865336c896e0db34edf8482a53e0e5d8f07ff95[m
+Author: Alexander Fuks <kungfux@users.noreply.github.com>
+Date:   Mon Mar 18 14:50:05 2024 +0400
+
+    feat: make post description customizable (#1602)
+    
+    
+    
+    ---------
+    
+    Co-authored-by: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+
+[33mcommit 0f8e782bfd5a3965278f5fc89d13a4082e98af36[m
+Merge: 547b95c 0a6c1fb
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Fri Mar 8 04:12:38 2024 +0800
+
+    Merge branch 'production'
+
+[33mcommit 0a6c1fb2514bad43edbbb799b8279146d8e3c5f4[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Fri Mar 8 04:12:36 2024 +0800
+
+    chore(release): 6.5.3
+
+[33mcommit 75a3d7399b257256a09d602cbe01062fe1cdf68d[m
+Author: Sukka <isukkaw@gmail.com>
+Date:   Fri Mar 8 04:05:58 2024 +0800
+
+    refactor: replace `polyfill.io` for `cdnjs` hosted link (#1598)
+
+[33mcommit 547b95cc7ae35018dadcc01b6eb1dc8c8943e67e[m
+Author: Neil Boyd <NeilBoyd@gmail.com>
+Date:   Mon Mar 4 20:09:39 2024 +0100
+
+    feat(i18n): allow `page.lang` to override `site.lang` (#1586)
+
+[33mcommit 2a7b56bb3606c806c5c9402f281844a350ea717a[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Mon Mar 4 18:03:51 2024 +0800
+
+    build(deps-dev): bump the npm group with 5 updates
+    
+    Updates `@babel/core` to 7.24.0
+    - [Release notes](https://github.com/babel/babel/releases)
+    - [Changelog](https://github.com/babel/babel/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/babel/babel/commits/v7.24.0/packages/babel-core)
+    
+    Updates `@babel/preset-env` to 7.24.0
+    - [Release notes](https://github.com/babel/babel/releases)
+    - [Changelog](https://github.com/babel/babel/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/babel/babel/commits/v7.24.0/packages/babel-preset-env)
+    
+    Updates `@commitlint/cli` from 18.6.1 to 19.0.3
+    - [Release notes](https://github.com/conventional-changelog/commitlint/releases)
+    - [Changelog](https://github.com/conventional-changelog/commitlint/blob/master/@commitlint/cli/CHANGELOG.md)
+    - [Commits](https://github.com/conventional-changelog/commitlint/commits/v19.0.3/@commitlint/cli)
+    
+    Updates `@commitlint/config-conventional` from 18.6.2 to 19.0.3
+    - [Release notes](https://github.com/conventional-changelog/commitlint/releases)
+    - [Changelog](https://github.com/conventional-changelog/commitlint/blob/master/@commitlint/config-conventional/CHANGELOG.md)
+    - [Commits](https://github.com/conventional-changelog/commitlint/commits/v19.0.3/@commitlint/config-conventional)
+    
+    Updates `rollup` to 4.12.0
+    - [Release notes](https://github.com/rollup/rollup/releases)
+    - [Changelog](https://github.com/rollup/rollup/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/rollup/rollup/compare/v4.10.0...v4.12.0)
+    
+    Close #1580
+
+[33mcommit 25c4166722621f544e7a2590a790e6cab798fb75[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sat Mar 2 01:28:45 2024 +0800
+
+    style(markdown): resolve `markdownlint` warnings
+
+[33mcommit 25b2ffa9bacc5aa04883cd3eda09696c1bc86a97[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Sat Mar 2 00:56:55 2024 +0800
+
+    build: configure rules for `markdownlint`
+
+[33mcommit 8a2afae6cab8fc9639be0a866b71699c8a80084c[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Fri Mar 1 20:06:34 2024 +0800
+
+    fix: search result prompt is empty (#1583)
+
+[33mcommit 6112b15b8ebb6a58043b778aafbb2cab4540bfb0[m
+Author: Alexander Fuks <kungfux@users.noreply.github.com>
+Date:   Fri Mar 1 00:55:30 2024 +0400
+
+    refactor: change alternate url for embed video file (#1579)
+
+[33mcommit e24a0c73ba00a902afa07184d20d9222eab7a47a[m
+Author: Alexander Fuks <kungfux@users.noreply.github.com>
+Date:   Fri Mar 1 00:01:10 2024 +0400
+
+    refactor: use explicit url for goatcounter (#1578)
+
+[33mcommit 0f5abc82a23b9b4d026cdde3c0ddcadc5822f6ad[m
+Merge: 4ddd5c4 795ff3f
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Fri Mar 1 03:51:26 2024 +0800
+
+    Merge branch 'production'
+
+[33mcommit 795ff3f4c33ebc2f5da551b4a205accf1e31bdc6[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Fri Mar 1 03:51:25 2024 +0800
+
+    chore(release): 6.5.2
+
+[33mcommit c41672b2e0b87ab6dfc648cdb2056671b9b042ee[m
+Merge: 388c151 9cc62e7
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Fri Mar 1 03:51:21 2024 +0800
+
+    Merge branch 'hotfix/6.5.2' into production
+
+[33mcommit 9cc62e703faf248b43e8971e7f82782daad5bbab[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Fri Mar 1 03:11:17 2024 +0800
+
+    build(release): build the gem on the `production` branch (#1577)
+
+[33mcommit 19d6bafbe1a60614e0d63b961bc73c342a9f6f33[m
+Author: Cotes Chung <11371340+cotes2020@users.noreply.github.com>
+Date:   Fri Mar 1 02:50:10 2024 +0800
+
+    fix: correct the base URL parameter name (#1576)
+    
+    #1553 introduced
+
+[33mcommit 4ddd5c437046a1e70cf396113e2351c452a25493[m
+Author: Alexander Fuks <kungfux@users.noreply.github.com>
+Date:   Wed Feb 28 20:58:20 2024 +0400
+
+    perf: i

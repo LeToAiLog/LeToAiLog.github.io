@@ -1,0 +1,47 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>LeToAi</title>
+  <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
+  <updated>2024-04-20T03:18:53+09:00</updated>
+  <author>
+    <name>LeToAi</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="ko"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
+  <rights> © 2024 LeToAi </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>유체 시뮬레이션 Step 1. Initialization module</title>
+    <link href="http://localhost:4000/posts/%EC%9C%A0%EC%B2%B4-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98-Step-1-%EB%AA%A8%EB%93%88-%EC%B4%88%EA%B8%B0%ED%99%94/" rel="alternate" type="text/html" title="유체 시뮬레이션 Step 1. Initialization module" />
+    <published>2023-10-02T15:48:37+09:00</published>
+  
+    <updated>2023-10-02T15:48:37+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EC%9C%A0%EC%B2%B4-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98-Step-1-%EB%AA%A8%EB%93%88-%EC%B4%88%EA%B8%B0%ED%99%94/</id>
+    <content src="http://localhost:4000/posts/%EC%9C%A0%EC%B2%B4-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98-Step-1-%EB%AA%A8%EB%93%88-%EC%B4%88%EA%B8%B0%ED%99%94/" />
+    <author>
+      <name>김준영(Kim Jun Yeong, LeToAi)</name>
+    </author>
+
+  
+    
+    <category term="Smoothed Particle Hydrodynamics" />
+    
+  
+
+  <summary>유체 시뮬레이션(Smoothed Particle Hydrodynamics)을 구현하기 위한 첫 걸음</summary>
+
+  </entry>
+
+</feed>
+
+
