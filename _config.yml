@@ -19,7 +19,8 @@ title: LeToAi # the main title
 tagline: 엔지니어가 되기 위한 개발 기록 D.vel(log) # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  홀로서기, 이제까지 배웠던 내용과 앞으로 배우는 내용들을 토대로 내 것으로만 살아남기 위해 고군분투 중입니다.
+  만들어 두었던 프로젝트들을 하나씩 업로드하고 있고, 앞으로 만들 프로젝트들도 업로드할 예정입니다.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
