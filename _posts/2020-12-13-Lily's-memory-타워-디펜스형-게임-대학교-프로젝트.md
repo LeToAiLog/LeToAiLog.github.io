@@ -51,7 +51,22 @@ Android를 대상으로 제작된 Lily's Memory는 성 지키기를 모티브로
 
 #### **Moving background**
 지정해 둔 속도와 시간값을 곱하여 변수에 저장해둔 뒤 mainTextureOffset 기능을 통해 Vector2의 x좌표에 저장해둔 값을 넣어주어 배경이 움직이는 것 처럼 보이게 구현했었다. 이 당시 궁금했던 점이라면 어차피 움직이는 사물은 구름에 한정되어 있고 그렇다면 배경과 구름을 분리하여 배경은 정적으로 처리하고 구름만 움직이게 한다면 리소스를 절약할 수 있을까라는 생각을 했었다. 결론은 Case by case 였다. 연산량이 부족하고 메모리가 부족하지 않은 환경이라면 지금처럼 배경 전체를 메모리에 올려놓고 한번에 처리하는 것이 좋다. 하지만 메모리가 부족하고 연산량이 충분하다면 구름을 각 Object로 만들어 메모리에 올라갈 용량을 줄이고 구름의 움직임을 각각 연산하는 것이 좋았다.
+
+#### **Collision**
+디펜스 게임에서는 투사체로 인해 많은 물리적인 충돌이 필요하다. Unity는 이런 물리 충돌을 쉽게 구현할 수 있도록 지원한다. C++에서 SDL을 써서 게임을 만들었을 때는 충돌을 구현하는 것만으로 상당한 시간이 소모되었었다. 편리하게 OnTriggerEnter2D, Stay2D, OnCollisionEnter2D 등을 이용하고 각 태그명마다 통과대상과 그렇지 않은 대상을 구분해서 공격, HP감소, 투사체를 사라지게 하는 등을 구현했다.
+
+#### **Tag, Layer, Order**
+Tag와 Layer, order는 렌더링의 순서를 정하고 몬스터끼리의 충돌 무시나 Hero나 성벽의 충돌을 활성화시켜 물리 속성을 갖는 Object들이 중력의 영향이나 그 외 물리적 힘을 받아 의도와 다른 곳으로 가지 못하게 막아줄 수 있다.
+
+#### **Game Load and Save**
+사용자가 게임 플레이시 업그레이드나 골드 등의 변화가 생길 경우 이를 GameManager로 보내 저장하고 불러올 수 있게 했다. Flag 변수를 통해 게임에 처음 접속자일 경우 False로 처리하고 한 번이라도 접속했던 사용자일 경우 True를 저장하여 튜토리얼 대상자인지 구분할 수 있다.
+
+벌써 4년전 일이기때문에 발표 자료를 보고 생각나는 것은 이 정도이다. 더 생각나면 추가해야겠다.
 <hr>
+
+### **Reformation**
+
+####
 
 <!-- 이미지 -->
 <!-- ![평활 입자 유체역학 커널 그림](/assets/img/smoothed-particle-hydrodynamics/SmoothingKernelFigurewithWhiteBackground.png){:width="500" height="589" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"} 
