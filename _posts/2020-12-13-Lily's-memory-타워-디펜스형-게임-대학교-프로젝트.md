@@ -8,10 +8,10 @@ pin: true
 math: true
 mermaid: true
 image:
-  path: /assets/img/smoothed-particle-hydrodynamics/
+  path: /assets/img/Lily's-memory/Lily.png
   # 대표 이미지의 애니메이션 적용
   lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
-  alt: 
+  alt: Lily
 ---
 <!--  -->
 # **타워 디펜스 게임**
