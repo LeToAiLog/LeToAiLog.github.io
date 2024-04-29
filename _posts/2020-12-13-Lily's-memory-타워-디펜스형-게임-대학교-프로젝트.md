@@ -66,8 +66,20 @@ Tag와 Layer, order는 렌더링의 순서를 정하고 몬스터끼리의 충�
 
 ### **Reformation**
 
-####
+1. Server와 연동하여 Client 관리
+2. Business model
+3. Story 추가
+4. 성 내부 구현
+5. 유지, 보수의 효율성을 위한 Code refactoring
+6. UI 개선
+7. 몬스터 추가
+8. Stage 추가
+9. Sound and Effect 추가
 
+등등 추가해야 할 일이 엄청 많았지만 욕심과 적절한 타협을 볼 수 밖에 없는 기간이었다.
+
+### **Lily's Memory Play Video**
+{% include embed/youtube.html id='F1pamCQfwAI' %}
 <!-- 이미지 -->
 <!-- ![평활 입자 유체역학 커널 그림](/assets/img/smoothed-particle-hydrodynamics/SmoothingKernelFigurewithWhiteBackground.png){:width="500" height="589" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"} 
 _**<span style="color:deepskyblue; font-size:150%">Figure 1. </span>
