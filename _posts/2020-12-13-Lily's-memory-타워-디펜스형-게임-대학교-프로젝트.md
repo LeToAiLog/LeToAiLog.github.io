@@ -78,6 +78,8 @@ Tag와 Layer, order는 렌더링의 순서를 정하고 몬스터끼리의 충�
 
 등등 추가해야 할 일이 엄청 많았지만 욕심과 적절한 타협을 볼 수 밖에 없는 기간이었다.
 
+<hr>
+
 ### **Lily's Memory Play Video**
 {% include embed/youtube.html id='F1pamCQfwAI' %}
 <!-- 이미지 -->
