@@ -34,8 +34,10 @@ Darwin's island는 내가 재미있게 했던 워크래프트3에서 유즈맵�
 #### **Map**
 
 ##### **Land scape**
+Map을 제작할 때 Landscape **<span style="color:red;font-size:100%">(1)</span>**에서 조각 **<span style="color:red;font-size:100%">(2)</span>** 을 선택하여 조각툴 **<span style="color:red;font-size:100%">(3)</span>** 로 마우스 좌클릭(지형 올림) 혹은 Shift + 마우스 좌클릭(지형 내림)을 통하여 굴곡진 지형 **<span style="color:red;font-size:100%">(4)</span>**을 만들고 조각툴 **<span style="color:red;font-size:100%">(3)</span>**외에 스무드, 평탄화, 침식, 수상침식, 노이즈를 이용하여 지형에 효과를 주었다. 또, Tool Settings에서 Tool Strength를 이용하면 지형 변화의 폭을 조절할 수 있고, Brush Settings에서 Brush Size로 영향 범위를 조절할 수 있다.
+![Land scape](/assets/img/Darwin's-island/landscape.png){:width="258" height="424" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
-#### **Projectile**
+완성된 Landscape에 Grass, Ground, Rock 등의 Texture를 입히기위해 Market Place에서 다운로드 받은 Texture Color Image(5)와 Texture의 Normal을 Import하여 가져온 후 Material(6)를 생성하여 편집했다.
 
 
 #### **Moving background**
