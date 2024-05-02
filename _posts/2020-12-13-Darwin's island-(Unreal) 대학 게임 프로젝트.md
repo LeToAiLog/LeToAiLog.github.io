@@ -8,7 +8,7 @@ pin: true
 math: true
 mermaid: true
 image:
-  path: /assets/img/Lily's-memory/Lily.png
+  path: /assets/img/Darwin's-island/darwing_main_img.png
   # 대표 이미지의 애니메이션 적용
   lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
   alt: Darwin's island
@@ -22,7 +22,9 @@ image:
 <hr>
 
 ### **Introduction**
-
+Darwin's island는 내가 재미있게 했던 워크래프트3에서 유즈맵인 다윈의 섬을 따라했다. 여기에 Story를 조금 더 가미해 국가간의 분쟁을 해소하는 방법으로 전쟁이 아닌 유전자 조작으로 만들어낸 몬스터(플레이어)로 서로 경쟁시켜 승리하는 국가가 보상을 받는 규칙을 설정했다.
+>Darwin은 진화론의 아버지라 불린다
+{: .prompt-info }
 
 <hr>
 
