@@ -32,13 +32,17 @@ Darwin's island는 내가 재미있게 했던 워크래프트3에서 유즈맵�
 ### **Technology**
 
 #### **Map**
+Map은 게임에 있어서 그 게임만의 독창적인 분위기를 이끌어낼 수 있는 중요한 수단이다. 어떤 느낌의 그래픽을 가진 Asset들을 사용하는지에 따라 Player에게 주고 싶은 느낌을 게임 제작자의 의도와 맞게 끌어낼 수도 있지만 의도와는 다른 방향으로 Player들이 받아들일 수도 있다. 몰입감과 특유의 분위기로 매력을 어필할 수 있어서 매우 중요한 역할을 하지만 무작정 고사양의 Asset들을 가져다 쓸 경우 그 방대한 용량과 렌더링에 있어서 프레임드랍을 야기할 수 있으므로 적절한 선에서 타협해야 한다. 여기에서는 Landscape를 통해 지형에 변화를 주었고 Foliage를 통해 식생들을 배치하며 Percent Triangle을 조절해 생성되는 Polygon을 조절하였다.
 
-##### **Land scape**
+##### **Landscape**
 Map을 제작할 때 Landscape **<span style="color:red;font-size:100%">(1)</span>**에서 조각 **<span style="color:red;font-size:100%">(2)</span>** 을 선택하여 조각툴 **<span style="color:red;font-size:100%">(3)</span>** 로 마우스 좌클릭(지형 올림) 혹은 Shift + 마우스 좌클릭(지형 내림)을 통하여 굴곡진 지형 **<span style="color:red;font-size:100%">(4)</span>**을 만들고 조각툴 **<span style="color:red;font-size:100%">(3)</span>**외에 스무드, 평탄화, 침식, 수상침식, 노이즈를 이용하여 지형에 효과를 주었다. 또, Tool Settings에서 Tool Strength를 이용하면 지형 변화의 폭을 조절할 수 있고, Brush Settings에서 Brush Size로 영향 범위를 조절할 수 있다.
-![Land scape](/assets/img/Darwin's-island/landscape.png){:width="258" height="424" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+![Landscape](/assets/img/Darwin's-island/landscape.png){:width="258" height="424" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 완성된 Landscape에 Grass, Ground, Rock 등의 Texture를 입히기위해 Market Place에서 다운로드 받은 Texture Color Image **<span style="color:red;font-size:100%">(5)</span>**와 Texture의 Normal을 Import하여 가져온 후 Material **<span style="color:red;font-size:100%">(6)</span>**를 생성하여 편집했다.
-![Land scape](/assets/img/Darwin's-island/Texture.png){:width="518" height="296" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+![Landscape](/assets/img/Darwin's-island/Texture.png){:width="518" height="296" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+
+##### **Foliage**
 
 #### **Moving background**
 
