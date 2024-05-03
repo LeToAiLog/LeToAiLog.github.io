@@ -41,7 +41,10 @@ Map을 제작할 때 Landscape **<span style="color:red;font-size:100%">(1)</spa
 완성된 Landscape에 Grass, Ground, Rock 등의 Texture를 입히기위해 Market Place에서 다운로드 받은 Texture Color Image **<span style="color:red;font-size:100%">(5)</span>**와 Texture의 Normal을 Import하여 가져온 후 Material **<span style="color:red;font-size:100%">(6)</span>**를 생성하여 편집했다.
 ![Landscape](/assets/img/Darwin's-island/Texture.png){:width="518" height="296" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
+LandscapeCoords (7)의 디테일 패널에서 Mapping Scale을 조절하여 한 타일에 들어갈 텍스쳐 이미지의 크기를 조절하였고, 이 값을 UVs와 연결시켜 Texture Sample에 넣었다. 여기에서 RGB로 나가는 값들은 Normal (8) 의 경우 Texture에 저장되어 있는 RGB 가중치로 각 색의 세기 비율이고, 색 이미지 (9)의 경우 RGB값과 Alpha값으로 색과 투명정도의 값을  Layer Blend (10) 에 넘겨주었다. Layer Blend (10) 에서 Layer를 Texture image의 수만큼 늘려 Texture image들에 해당하는 이름을 가진 값들을 받아 Material (11) 에 넣었다. 들어가는 값들로는 Tile에 표현될 기본 색(RGB), 거칠기 (Alpha), Normal값(총 3개의 Layer Blend가 필요) Metallic (값이 높을수록 쇠와 가까운 질감을 표현)을 넣었고 Metallic의 값은 여기에서 0이다.
 
+ Material을 저장 후 World Outliner에서 Landscape(12)를 선택하여 디테일 패널 Landscape Material(13)에서 M_landscapemap을 넣고 해당 값들을 받아 Ground, Grass, Rock을 표현할 수 있도록 준비했다. Landscape (1)에서 Paint(15)를 선책하고 Layer(14)를 추가하여 Map에서 제일 많이 표현되는 Texture image를 선택 후 Map 전체를 덮고 나머지 Layer들로 세부적인 부분들을 표현했다. Texture sample(8, 9)은 Texture를 끌어다 놓기로 생성이 가능하다.
+ ![Landscape](/assets/img/Darwin's-island/Layer_blending.png){:width="883" height="1015" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 ##### **Foliage**
 
 #### **Moving background**
