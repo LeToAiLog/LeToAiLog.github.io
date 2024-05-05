@@ -36,6 +36,7 @@ Map은 게임에 있어서 그 게임만의 독창적인 분위기를 이끌어�
 
 ##### **Landscape**
 Map을 제작할 때 Landscape **<span style="color:red;font-size:100%">(1)</span>**에서 조각 **<span style="color:red;font-size:100%">(2)</span>** 을 선택하여 조각툴 **<span style="color:red;font-size:100%">(3)</span>** 로 마우스 좌클릭(지형 올림) 혹은 Shift + 마우스 좌클릭(지형 내림)을 통하여 굴곡진 지형 **<span style="color:red;font-size:100%">(4)</span>**을 만들고 조각툴 **<span style="color:red;font-size:100%">(3)</span>**외에 스무드, 평탄화, 침식, 수상침식, 노이즈를 이용하여 지형에 효과를 주었다. 또, Tool Settings에서 Tool Strength를 이용하면 지형 변화의 폭을 조절할 수 있고, Brush Settings에서 Brush Size로 영향 범위를 조절할 수 있다.
+
 ![Landscape](/assets/img/Darwin's-island/landscape.png){:width="258" height="424" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 완성된 Landscape에 Grass, Ground, Rock 등의 Texture를 입히기위해 Market Place에서 다운로드 받은 Texture Color Image **<span style="color:red;font-size:100%">(5)</span>**와 Texture의 Normal을 Import하여 가져온 후 Material **<span style="color:red;font-size:100%">(6)</span>**를 생성하여 편집했다.
@@ -44,6 +45,7 @@ Map을 제작할 때 Landscape **<span style="color:red;font-size:100%">(1)</spa
 LandscapeCoords **<span style="color:red;font-size:100%">(7)</span>**의 디테일 패널에서 Mapping Scale을 조절하여 한 타일에 들어갈 텍스쳐 이미지의 크기를 조절하였고, 이 값을 UVs와 연결시켜 Texture Sample에 넣었다. 여기에서 RGB로 나가는 값들은 Normal **<span style="color:red;font-size:100%">(8)</span>** 의 경우 Texture에 저장되어 있는 RGB 가중치로 각 색의 세기 비율이고, 색 이미지 **<span style="color:red;font-size:100%">(9)</span>**의 경우 RGB값과 Alpha값으로 색과 투명정도의 값을  Layer Blend **<span style="color:red;font-size:100%">(10)</span>** 에 넘겨주었다. Layer Blend **<span style="color:red;font-size:100%">(10)</span>** 에서 Layer를 Texture image의 수만큼 늘려 Texture image들에 해당하는 이름을 가진 값들을 받아 Material **<span style="color:red;font-size:100%">(11)</span>** 에 넣었다. 들어가는 값들로는 Tile에 표현될 기본 색(RGB), 거칠기 (Alpha), Normal값(총 3개의 Layer Blend가 필요) Metallic (값이 높을수록 쇠와 가까운 질감을 표현)을 넣었고 Metallic의 값은 여기에서 0이다.
 
  Material을 저장 후 World Outliner에서 Landscape **<span style="color:red;font-size:100%">(12)</span>**를 선택하여 디테일 패널 Landscape Material **<span style="color:red;font-size:100%">(13)</span>**에서 M_landscapemap을 넣고 해당 값들을 받아 Ground, Grass, Rock을 표현할 수 있도록 준비했다. Landscape **<span style="color:red;font-size:100%">(1)</span>**에서 Paint **<span style="color:red;font-size:100%">(15)</span>**를 선책하고 Layer **<span style="color:red;font-size:100%">(14)</span>**를 추가하여 Map에서 제일 많이 표현되는 Texture image를 선택 후 Map 전체를 덮고 나머지 Layer들로 세부적인 부분들을 표현했다. Texture sample**<span style="color:red;font-size:100%">(8, 9)</span>**은 Texture를 끌어다 놓기로 생성이 가능하다.
+ 
  ![Landscape](/assets/img/Darwin's-island/Layer_blending.png){:width="883" height="1015" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
  <hr>
