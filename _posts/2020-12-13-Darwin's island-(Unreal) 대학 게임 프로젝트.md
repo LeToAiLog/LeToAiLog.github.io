@@ -54,7 +54,9 @@ Market Place에서 다운로드 받은 식생을 Import 하여 폴리지 **<span
 
  ![Landscape](/assets/img/Darwin's-island/Foliage.png){:width="538" height="298" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
-#### **Moving background**
+<hr>
+
+#### **User Interface**
 
 
 #### **Collision**
