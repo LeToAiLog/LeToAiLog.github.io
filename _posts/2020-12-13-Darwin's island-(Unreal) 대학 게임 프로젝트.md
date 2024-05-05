@@ -50,7 +50,9 @@ LandscapeCoords **<span style="color:red;font-size:100%">(7)</span>**의 디테�
 
 ##### **Foliage**
 
-Market Place에서 다운로드 받은 식생을 Import 하여 폴리지(18) 타입에 끌어다 놓아 추가했다. 브러시(17)
+Market Place에서 다운로드 받은 식생을 Import 하여 폴리지 **<span style="color:red;font-size:100%">(18)</span>** 타입에 끌어다 놓아 추가했다. 브러시 **<span style="color:red;font-size:100%">(17)</span>** 크기로 배치할 식생들의 범위 **<span style="color:red;font-size:100%">(19)</span>** 를 지정해주고 페인트 밀도로 식생들이 얼마나 빽빽하게 배치될지를 정해 주었다. 식생들을 배치하게 될 때 고퀄리티의 그래픽이 중요하다면 표현되는 식생들의 디테일이 매우 중요하겠지만 대부분의 게임에서 식생들의 역할은 그 중요도가 낮기때문에 렌더링에 걸리는 시간과 소모되는 메모리를 줄이기 위해 각각의 식생들의 속성에 들어가 Percent Triangle **<span style="color:red;font-size:100%">(20)</span>**의 수치를 낮추어 주었다. 이 수치가 낮아지게 되면 식생의 면을 표현할 때 사용되는 삼각형의 수가 적어지게 되므로 적어지는 만큼 메모리를 아낄 수 있어 게임 환경을 쾌적하게 만드는 것이 가능하다.
+
+ ![Landscape](/assets/img/Darwin's-island/Foliage.png){:width="538" height="298" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 #### **Moving background**
 
