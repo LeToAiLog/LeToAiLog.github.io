@@ -45,7 +45,11 @@ LandscapeCoords (7)의 디테일 패널에서 Mapping Scale을 조절하여 한 
 
  Material을 저장 후 World Outliner에서 Landscape(12)를 선택하여 디테일 패널 Landscape Material(13)에서 M_landscapemap을 넣고 해당 값들을 받아 Ground, Grass, Rock을 표현할 수 있도록 준비했다. Landscape (1)에서 Paint(15)를 선책하고 Layer(14)를 추가하여 Map에서 제일 많이 표현되는 Texture image를 선택 후 Map 전체를 덮고 나머지 Layer들로 세부적인 부분들을 표현했다. Texture sample(8, 9)은 Texture를 끌어다 놓기로 생성이 가능하다.
  ![Landscape](/assets/img/Darwin's-island/Layer_blending.png){:width="883" height="1015" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+ <hr>
+
 ##### **Foliage**
+
 
 #### **Moving background**
 
