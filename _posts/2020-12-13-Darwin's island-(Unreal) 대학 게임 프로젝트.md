@@ -64,9 +64,13 @@ Market Place에서 다운로드 받은 식생을 Import 하여 폴리지 **<span
 
 게임의 몰입도를 위해서는 가능하면 기본 배치되는 글이나 버튼들은 숨기는게 좋다. 하지만 게임의 독특한 특성으로 인해 사용자에게 전달되어야 하는 정보까지 숨기게 되면 오히려 사용자의 불편함을 야기하게 된다. 따라서 User Interface는 각 게임에 따라 화면에 어떤 버튼들과 설명들이 출력되어야 하는지 반드시 고민해야 할 항목이다.
 
-Darwin's island는 굉장히 간단한 조작법으로 인해 화면에 출력되는 글이 필요없었다. 다만 Hit point를 사용자가 알게 하기 위해서는 Bar형태로 표시하거나 숫자로 화면에 출력하거나 하는 방법을 사용해야만 했다. 하지만 깔끔한 Interface를 더 선호하는 나는 Bar나 Hit Point로 표시하기 보다 피가 없을때 이미지의 Alpha값을 올려 핏자국이 점점 보일 수 있도록 했다.
+Darwin's island는 굉장히 간단한 조작법으로 인해 화면에 출력되는 글이 필요없었다. 다만 Hit point를 사용자가 알게 하기 위해서는 Bar형태로 표시하거나 숫자로 화면에 출력하거나 하는 방법을 사용해야만 했다. 하지만 깔끔한 Interface를 더 선호하는 나는 Bar나 Hit Point로 표시하기 보다 피가 없을때 이미지의 Alpha값을 조절하여 핏자국이 점점 보일 수 있도록 했다.
 
 피가 없을때 핏자국을 표현하기 위해 Image_37 **<span style="color:red;font-size:100%">(1)</span>**에 들어가는 핏자국 이미지의 Alpha값을 0으로 초기설정 후 Text 0 **<span style="color:red;font-size:100%">(1)</span>** 에 Player의 Level 값을 불러올 수 있게 GetText 0 **<span style="color:red;font-size:100%">(2)</span>** 함수를 만들어 반환시키고 바인딩 **<span style="color:red;font-size:100%">(3)</span>** 했다.
+
+ ![Blood effect](/assets/img/Darwin's-island/Blood_effect_BluePrint.png){:width="624" height="239" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+ 앞서 이미지에서 0으로 설정했었던 Alpha값을 Player(4)의 Health에서 CurrentHealth를 MaxHealth로 나누어 CurrentHealth가 작아질수록 0에 가까운 값을 받아 $1-$CurrentHealth $/$ MaxHealth의 식을 통해 LinearColor에서 Alpha값에 들어가는 값이 1에 가깝게하면 CurrentHealth가 0에 가까울수록 핏자국 이미지의 Alpha값이 1에 가까워지므로 이미지가 선명해진다. 
 
 #### **Collision**
 
