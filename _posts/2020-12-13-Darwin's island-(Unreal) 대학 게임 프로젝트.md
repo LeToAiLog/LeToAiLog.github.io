@@ -60,6 +60,7 @@ Market Place에서 다운로드 받은 식생을 Import 하여 폴리지 **<span
 
 #### **User Interface**
 
+ ![Blood effect](/assets/img/Darwin's-island/FBlood_effect_HUDoliage.png){:width="1869" height="378" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 #### **Collision**
 
