@@ -44,23 +44,23 @@ Map을 제작할 때 Landscape **<span style="color:red;font-size:100%">(1)</spa
 
 LandscapeCoords **<span style="color:red;font-size:100%">(7)</span>**의 디테일 패널에서 Mapping Scale을 조절하여 한 타일에 들어갈 텍스쳐 이미지의 크기를 조절하였고, 이 값을 UVs와 연결시켜 Texture Sample에 넣었다. 여기에서 RGB로 나가는 값들은 Normal **<span style="color:red;font-size:100%">(8)</span>** 의 경우 Texture에 저장되어 있는 RGB 가중치로 각 색의 세기 비율이고, 색 이미지 **<span style="color:red;font-size:100%">(9)</span>**의 경우 RGB값과 Alpha값으로 색과 투명정도의 값을  Layer Blend **<span style="color:red;font-size:100%">(10)</span>** 에 넘겨주었다. Layer Blend **<span style="color:red;font-size:100%">(10)</span>** 에서 Layer를 Texture image의 수만큼 늘려 Texture image들에 해당하는 이름을 가진 값들을 받아 Material **<span style="color:red;font-size:100%">(11)</span>** 에 넣었다. 들어가는 값들로는 Tile에 표현될 기본 색(RGB), 거칠기 (Alpha), Normal값(총 3개의 Layer Blend가 필요) Metallic (값이 높을수록 쇠와 가까운 질감을 표현)을 넣었고 Metallic의 값은 여기에서 0이다.
 
- Material을 저장 후 World Outliner에서 Landscape **<span style="color:red;font-size:100%">(12)</span>**를 선택하여 디테일 패널 Landscape Material **<span style="color:red;font-size:100%">(13)</span>**에서 M_landscapemap을 넣고 해당 값들을 받아 Ground, Grass, Rock을 표현할 수 있도록 준비했다. Landscape **<span style="color:red;font-size:100%">(1)</span>**에서 Paint **<span style="color:red;font-size:100%">(15)</span>**를 선책하고 Layer **<span style="color:red;font-size:100%">(14)</span>**를 추가하여 Map에서 제일 많이 표현되는 Texture image를 선택 후 Map 전체를 덮고 나머지 Layer들로 세부적인 부분들을 표현했다. Texture sample**<span style="color:red;font-size:100%">(8, 9)</span>**은 Texture를 끌어다 놓기로 생성이 가능하다.
+Material을 저장 후 World Outliner에서 Landscape **<span style="color:red;font-size:100%">(12)</span>**를 선택하여 디테일 패널 Landscape Material **<span style="color:red;font-size:100%">(13)</span>**에서 M_landscapemap을 넣고 해당 값들을 받아 Ground, Grass, Rock을 표현할 수 있도록 준비했다. Landscape **<span style="color:red;font-size:100%">(1)</span>**에서 Paint **<span style="color:red;font-size:100%">(15)</span>**를 선책하고 Layer **<span style="color:red;font-size:100%">(14)</span>**를 추가하여 Map에서 제일 많이 표현되는 Texture image를 선택 후 Map 전체를 덮고 나머지 Layer들로 세부적인 부분들을 표현했다. Texture sample**<span style="color:red;font-size:100%">(8, 9)</span>**은 Texture를 끌어다 놓기로 생성이 가능하다.
  
- ![Landscape](/assets/img/Darwin's-island/Layer_blending.png){:width="313" height="360" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+![Landscape](/assets/img/Darwin's-island/Layer_blending.png){:width="313" height="360" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
- <hr>
+<hr>
 
 ##### **Foliage**
 
 Market Place에서 다운로드 받은 식생을 Import 하여 폴리지 **<span style="color:red;font-size:100%">(18)</span>** 타입에 끌어다 놓아 추가했다. 브러시 **<span style="color:red;font-size:100%">(17)</span>** 크기로 배치할 식생들의 범위 **<span style="color:red;font-size:100%">(19)</span>** 를 지정해주고 페인트 밀도로 식생들이 얼마나 빽빽하게 배치될지를 정해 주었다. 식생들을 배치하게 될 때 고퀄리티의 그래픽이 중요하다면 표현되는 식생들의 디테일이 매우 중요하겠지만 대부분의 게임에서 식생들의 역할은 그 중요도가 낮기때문에 렌더링에 걸리는 시간과 소모되는 메모리를 줄이기 위해 각각의 식생들의 속성에 들어가 Percent Triangle **<span style="color:red;font-size:100%">(20)</span>**의 수치를 낮추어 주었다. 이 수치가 낮아지게 되면 식생의 면을 표현할 때 사용되는 삼각형의 수가 적어지게 되므로 적어지는 만큼 메모리를 아낄 수 있어 게임 환경을 쾌적하게 만드는 것이 가능하다.
 
- ![Landscape](/assets/img/Darwin's-island/Foliage.png){:width="538" height="298" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+![Landscape](/assets/img/Darwin's-island/Foliage.png){:width="538" height="298" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 <hr>
 
 #### **User Interface**
 
- ![Blood effect](/assets/img/Darwin's-island/FBlood_effect_HUDoliage.png){:width="1869" height="378" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+![Blood effect](/assets/img/Darwin's-island/FBlood_effect_HUDoliage.png){:width="1869" height="378" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 게임의 몰입도를 위해서는 가능하면 기본 배치되는 글이나 버튼들은 숨기는게 좋다. 하지만 게임의 독특한 특성으로 인해 사용자에게 전달되어야 하는 정보까지 숨기게 되면 오히려 사용자의 불편함을 야기하게 된다. 따라서 User Interface는 각 게임에 따라 화면에 어떤 버튼들과 설명들이 출력되어야 하는지 반드시 고민해야 할 항목이다.
 
@@ -68,13 +68,19 @@ Darwin's island는 굉장히 간단한 조작법으로 인해 화면에 출력�
 
 피가 없을때 핏자국을 표현하기 위해 Image_37 **<span style="color:red;font-size:100%">(1)</span>**에 들어가는 핏자국 이미지의 Alpha값을 0으로 초기설정 후 Text 0 **<span style="color:red;font-size:100%">(1)</span>** 에 Player의 Level 값을 불러올 수 있게 GetText 0 **<span style="color:red;font-size:100%">(2)</span>** 함수를 만들어 반환시키고 바인딩 **<span style="color:red;font-size:100%">(3)</span>** 했다.
 
- ![Blood effect](/assets/img/Darwin's-island/Blood_effect_BluePrint.png){:width="624" height="239" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+![Blood effect](/assets/img/Darwin's-island/Blood_effect_BluePrint.png){:width="624" height="239" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
- 앞서 이미지에서 0으로 설정했었던 Alpha값을 Player **<span style="color:red;font-size:100%">(4)</span>**의 Health에서 CurrentHealth를 MaxHealth로 나누어 CurrentHealth가 작아질수록 0에 가까운 값을 받아 $1-$CurrentHealth $/$ MaxHealth의 식을 통해 LinearColor에서 Alpha값에 들어가는 값이 1에 가깝게하면 CurrentHealth가 0에 가까울수록 핏자국 이미지의 Alpha값이 1에 가까워지므로 이미지가 선명해진다. 아래는 핏자국 효과를 보여주는 결과 이미지이다.
+앞서 이미지에서 0으로 설정했었던 Alpha값을 Player **<span style="color:red;font-size:100%">(4)</span>**의 Health에서 CurrentHealth를 MaxHealth로 나누어 CurrentHealth가 작아질수록 0에 가까운 값을 받아 $1-$CurrentHealth $/$ MaxHealth의 식을 통해 LinearColor에서 Alpha값에 들어가는 값이 1에 가깝게하면 CurrentHealth가 0에 가까울수록 핏자국 이미지의 Alpha값이 1에 가까워지므로 이미지가 선명해진다. 아래는 핏자국 효과를 보여주는 결과 이미지이다.
 
- ![Blood effect](/assets/img/Darwin's-island/Blood_effect_image.jpg){:width="564" height="253" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+![Blood effect](/assets/img/Darwin's-island/Blood_effect_image.jpg){:width="564" height="253" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
- 게임 승리와 패배의 이미지 **<span style="color:red;font-size:100%">(6)</span>** 를 나누고 같은 로직을 적용하여 Quit Game **<span style="color:red;font-size:100%">(7)</span>** 을 클릭시에 게임을 종료할 수 있게 만들었다. 게임을 종료하기 위해 Quit Game **<span style="color:red;font-size:100%">(7)</span>** 을 누를 수 있게 하려면 마우스 커서 활성화를 해야한다. Get Player Controller **<span style="color:red;font-size:100%">(8)</span>** 를 받아와 Show Mouse Cursor 이벤트에서 True로 설정하여 마우스 커서 활성화를 하였고, Player의 레벨이 10이상이거나 드래곤이 죽었을 때 승리 이벤트 **<span style="color:red;font-size:100%">(9)</span>**를 발생시키도록 했다.
+게임 승리와 패배의 이미지 **<span style="color:red;font-size:100%">(6)</span>** 를 나누고 같은 로직을 적용하여 Quit Game **<span style="color:red;font-size:100%">(7)</span>** 을 클릭시에 게임을 종료할 수 있게 만들었다. 게임을 종료하기 위해 Quit Game **<span style="color:red;font-size:100%">(7)</span>** 을 누를 수 있게 하려면 마우스 커서 활성화를 해야한다. Get Player Controller **<span style="color:red;font-size:100%">(8)</span>** 를 받아와 Show Mouse Cursor 이벤트에서 True로 설정하여 마우스 커서 활성화를 하였고, Player의 레벨이 10이상이거나 드래곤이 죽었을 때 승리 이벤트 **<span style="color:red;font-size:100%">(9)</span>**를 발생시키도록 했다.
+
+![You died](/assets/img/Darwin's-island/You_died.png){:width="1375" height="339" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+![You died player](/assets/img/Darwin's-island/You_died_player.png){:width="1553" height="524" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+![You died widget](/assets/img/Darwin's-island/You_died_widget.png){:width="1557" height="328" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 #### **Artificial Intelligence**
 
