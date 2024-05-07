@@ -74,7 +74,9 @@ Darwin's island는 굉장히 간단한 조작법으로 인해 화면에 출력�
 
  ![Blood effect](/assets/img/Darwin's-island/Blood_effect_image.jpg){:width="564" height="253" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
-#### **Collision**
+ 게임 승리와 패배의 이미지(6)를 나누고 같은 로직을 적용하여 Quit Game(7)을 클릭시에 게임을 종료할 수 있게 만들었다. 게임을 종료하기 위해 Quit Game (7)을 누를 수 있게 하려면 마우스 커서 활성화를 해야한다. Get Player Controller (8) 를 받아와 Show Mouse Cursor 이벤트에서 True로 설정하여 마우스 커서 활성화를 하였고, Player의 레벨이 10이상이거나 드래곤이 죽었을 때 승리 이벤트 (9)를 발생시키도록 했다.
+
+#### **Artificial Intelligence**
 
 
 #### **Artificial inteligence(Enemy)**
