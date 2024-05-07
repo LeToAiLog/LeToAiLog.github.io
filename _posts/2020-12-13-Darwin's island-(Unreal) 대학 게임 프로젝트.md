@@ -82,6 +82,10 @@ Darwin's island는 굉장히 간단한 조작법으로 인해 화면에 출력�
 
 ![You died widget](/assets/img/Darwin's-island/You_died_widget.png){:width="1557" height="328" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
+승리 UI가 보이게 되면 Player (8)의 움직임을 멈추고 더 이상 조종이 불가능하게 Actor를 파괴했다. (9)와 같은 방법으로 Player가 죽었을 시 YOU DIED UI를 활성화하고 Actor의 움직임을 멈춘 후 파괴시킨 다음에 마우스 커서를 활성화하여 Quit Game (7)을 클릭할 수 있게 만들었다.
+
+<hr>
+
 #### **Artificial Intelligence**
 
 
