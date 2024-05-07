@@ -46,7 +46,7 @@ LandscapeCoords **<span style="color:red;font-size:100%">(7)</span>**의 디테�
 
  Material을 저장 후 World Outliner에서 Landscape **<span style="color:red;font-size:100%">(12)</span>**를 선택하여 디테일 패널 Landscape Material **<span style="color:red;font-size:100%">(13)</span>**에서 M_landscapemap을 넣고 해당 값들을 받아 Ground, Grass, Rock을 표현할 수 있도록 준비했다. Landscape **<span style="color:red;font-size:100%">(1)</span>**에서 Paint **<span style="color:red;font-size:100%">(15)</span>**를 선책하고 Layer **<span style="color:red;font-size:100%">(14)</span>**를 추가하여 Map에서 제일 많이 표현되는 Texture image를 선택 후 Map 전체를 덮고 나머지 Layer들로 세부적인 부분들을 표현했다. Texture sample**<span style="color:red;font-size:100%">(8, 9)</span>**은 Texture를 끌어다 놓기로 생성이 가능하다.
  
- ![Landscape](/assets/img/Darwin's-island/Layer_blending.png){:width="883" height="1015" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+ ![Landscape](/assets/img/Darwin's-island/Layer_blending.png){:width="313" height="360" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
  <hr>
 
@@ -70,7 +70,9 @@ Darwin's island는 굉장히 간단한 조작법으로 인해 화면에 출력�
 
  ![Blood effect](/assets/img/Darwin's-island/Blood_effect_BluePrint.png){:width="624" height="239" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
- 앞서 이미지에서 0으로 설정했었던 Alpha값을 Player(4)의 Health에서 CurrentHealth를 MaxHealth로 나누어 CurrentHealth가 작아질수록 0에 가까운 값을 받아 $1-$CurrentHealth $/$ MaxHealth의 식을 통해 LinearColor에서 Alpha값에 들어가는 값이 1에 가깝게하면 CurrentHealth가 0에 가까울수록 핏자국 이미지의 Alpha값이 1에 가까워지므로 이미지가 선명해진다. 
+ 앞서 이미지에서 0으로 설정했었던 Alpha값을 Player(4)의 Health에서 CurrentHealth를 MaxHealth로 나누어 CurrentHealth가 작아질수록 0에 가까운 값을 받아 $1-$CurrentHealth $/$ MaxHealth의 식을 통해 LinearColor에서 Alpha값에 들어가는 값이 1에 가깝게하면 CurrentHealth가 0에 가까울수록 핏자국 이미지의 Alpha값이 1에 가까워지므로 이미지가 선명해진다. 아래는 핏자국 효과를 보여주는 결과 이미지이다.
+
+ ![Blood effect](/assets/img/Darwin's-island/Blood_effect_image.jpg){:width="564" height="253" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 #### **Collision**
 
