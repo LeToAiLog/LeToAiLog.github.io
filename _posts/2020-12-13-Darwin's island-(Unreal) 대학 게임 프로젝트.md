@@ -88,6 +88,9 @@ Darwin's island는 굉장히 간단한 조작법으로 인해 화면에 출력�
 
 #### **Artificial Intelligence**
 
+AI는 중립과 적대적 관계로 나누었다. 중립 개체는 게임 시작시 목표 지점을 반복하여 이동하는 Patrol로 구현했고, 적대 개체는 일정 반경안에 Player가 들어올 경우 Player를 추격하고 데미지를 입히도록 구현했다.
+
+![Chase and damage](/assets/img/Darwin's-island/Chase_and_damage.png){:width="564" height="288" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 #### **Artificial inteligence(Enemy)**
 
