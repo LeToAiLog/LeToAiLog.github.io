@@ -82,7 +82,7 @@ Darwin's island는 굉장히 간단한 조작법으로 인해 화면에 출력�
 
 ![You died widget](/assets/img/Darwin's-island/You_died_widget.png){:width="1557" height="328" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
-승리 UI가 보이게 되면 Player (8)의 움직임을 멈추고 더 이상 조종이 불가능하게 Actor를 파괴했다. (9)와 같은 방법으로 Player가 죽었을 시 YOU DIED UI를 활성화하고 Actor의 움직임을 멈춘 후 파괴시킨 다음에 마우스 커서를 활성화하여 Quit Game (7)을 클릭할 수 있게 만들었다.
+승리 UI가 보이게 되면 Player **<span style="color:red;font-size:100%">(8)</span>**의 움직임을 멈추고 더 이상 조종이 불가능하게 Actor를 파괴했다. **<span style="color:red;font-size:100%">(9)</span>**와 같은 방법으로 Player가 죽었을 시 YOU DIED UI를 활성화하고 Actor의 움직임을 멈춘 후 파괴시킨 다음에 마우스 커서를 활성화하여 Quit Game **<span style="color:red;font-size:100%">(7)</span>**을 클릭할 수 있게 만들었다.
 
 <hr>
 
@@ -92,8 +92,9 @@ AI는 중립과 적대적 관계로 나누었다. 중립 개체는 게임 시작
 
 ![Chase and damage](/assets/img/Darwin's-island/Chase_and_damage.png){:width="564" height="288" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
-#### **Artificial inteligence(Enemy)**
+Chase the Player (10)와 Patrol (11)은 Custom Event이다. 적대 개체인 드래곤과 바게스트에서는 ActorBeginOverlap Event (10)를 통해 Sphere (13)의 (12) 영역안에 Player의 캐릭터가 Overlap되면 Player in range boolean 변수를 true로 저장하고 Player를 추격하게 했다. Enemy와 Player 캐릭터의 Overlap (10)이 끝나게 되면 Player in range의 값을 false로 저장하고 즉시 Enemy가 Player를 추격하는 것을 멈추게했다. Sphere(13)는 Player와 부딪혔을때 Player가 Sphere안에 들어갈 수 있도록 하기 위함과 OverlapEvent를 받기 위해 Collision Presets (14)을 OverlapAllDynamic으로 설정해주었다.
 
+![Chase and damage](/assets/img/Darwin's-island/Chase_and_damage_sphere_collision.png){:width="722" height="299" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 <hr>
 
