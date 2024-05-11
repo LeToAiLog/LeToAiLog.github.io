@@ -99,6 +99,10 @@ Chase the Player **<span style="color:red;font-size:100%">(10)</span>**와 Patro
 **<span style="color:red;font-size:100%">(15)</span>**는 Patrol Event의 구현 부분이다. AI Move To를 이용하여 사슴과 바게스트가 맵에 위치 시켜놓은 TargetPoint **<span style="color:red;font-size:100%">(16)</span>** 위치로 반복해서 움직이게 만들었다. Self **<span style="color:red;font-size:100%">(15)</span>**는 움직이는 대상인 Pawn **<span style="color:red;font-size:100%">(15)</span>**위치에 값을 넣어주고 TargetActor에는 목표 위치의 값인 TargetPoint **<span style="color:red;font-size:100%">(16)</span>**가 들어가게 된다. 첫 번째 목표 위치까지 이동이 성공하게 되면 2초동안 해당 위치에 머물렀다가 다시 다음 TargetPoint **<span style="color:red;font-size:100%">(17)</span>**로 이동하게 되고 정해진 위치가 모두 끝나게 되면 다시 처음으로 돌아가서 반복하게 했다.
 
 AI의 움직임을 제어하기 위해서는 NavMeshBoundsVolume **<span style="color:red;font-size:100%">(18)</span>**으로 AI가 움직이는 공간을 지정해줘야 한다. 따라서 NavMeshBoundsVolume **<span style="color:red;font-size:100%">(19)</span>**으로 맵 전체를 감싸주어 맵 내에 있는 Enemy가 움직일 수 있는 공간을 할당해 주었다.
+
+![Patrol Event](/assets/img/Darwin's-island/Patrol_Event.png){:width="1058" height="410" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+![Nav Mesh](/assets/img/Darwin's-island/NavMesh.png){:width="639" height="270" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 <hr>
 
 ### **Reformation**
