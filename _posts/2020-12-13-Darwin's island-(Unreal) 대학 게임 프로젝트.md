@@ -103,6 +103,8 @@ AI의 움직임을 제어하기 위해서는 NavMeshBoundsVolume **<span style="
 ![Patrol Event](/assets/img/Darwin's-island/Patrol_Event.png){:width="1058" height="410" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 ![Nav Mesh](/assets/img/Darwin's-island/NavMesh.png){:width="639" height="270" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+![Chase and damage](/assets/img/Darwin's-island/Chase_and_damage_2.png){:width="1244" height="465" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 <hr>
 
 ### **Reformation**
