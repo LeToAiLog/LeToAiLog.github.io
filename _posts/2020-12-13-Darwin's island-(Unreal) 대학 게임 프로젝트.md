@@ -112,7 +112,7 @@ Enemy는 Player가 Player In Range의 범위안에 있다면 Attack Rate의 값�
 
 ![Box Trace By Profile](/assets/img/Darwin's-island/Box_Trace_By_Profile.png){:width="1244" height="465" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
-
+공격 Montage에서 Skeleton에 있는 관절의 이름을 똑같이 작성해야 Get Socket Location에서 값을 읽어 BoxTraceByProfile (21)에 전달한다. BoxTraceByProfile에서는 값을 받아서 모션에 해당하는 유효 공격 범위의 크기를 Half Size로 지정한다. 유효 공격 범위를 보기 위해 Draw Debug Type에서 For Duration (23)을 이용하여 공격 영향범위에 대해서 (23) 시각화했다. 공격 모션 (23)을 따라서 생성되는 빨간 박스에 Player가 닿게 되면 녹색으로 박스의 색깔이 변하게 되어 충돌을 알린다. BoxTraceByProfile에서 Out Hit에 있는 요소들 중에 데미지를 받는 Actor를 받아와야 한다. 데미지를 받는 Actor는 Hit Actor (24)의 기능을 사용해야 하므로 배열에 요소들을 받아 저장하고 For Each Loop를 통해 요소들을 Break Hit Result로 사용자가 볼 수 있게 해주었다. Hit Actor를 Apply Damage의 Damaged Actor에 연결하여 데미지를 받는 Actor를 설정해주었고 Base Damage에 Enemy의 공격력을 받아와 해당 Damage가 피해를 받는 Actor에 적용되게 했다.
 
 <hr>
 
