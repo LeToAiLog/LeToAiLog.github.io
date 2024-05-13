@@ -108,9 +108,11 @@ AI의 움직임을 제어하기 위해서는 NavMeshBoundsVolume **<span style="
 
 (20)은 Chase The Player Event의 구현 부분이다. Enemy의 상태를 isDead로 확인하여 True일 때 움직임을 멈추고 죽는 애니메이션을 재생한다. False면 AI Move To로 Target Actor인 Player의 위치로 이동하고 일정 범위 안에 Player가 들어오면 Branch로 Enemy의 공격상태를 확인한다. 공격이 가능하다면 Can Attack의 값을 False로 바꾸고 Montage Play를 이용하여 공격 애니메이션을 실행한다. 만약 불가능하다면 다시 Player를 추격하도록 했다. On Completed는 Montage의 Play가 성공적으로 마쳐지면 실행하고 On Interrupted는 Montage의 Play가 중단되면 실행한다. 이와 같은 Blue Print를 작성한 이유는 Enemy의 공격 모션이 Player가 공격하여 Hit 모션으로 바뀌게되면 석상처럼 굳어 아무것도 안하는 일이 발생하게 되어 이와 같은 처리를 했었다.
 
-Enemy는 Player가 Player In Range의 범위안에 있다면 Attack Rate의 값을 받아 Delay로 지연시킨 후 해당 시간이 지난 후에 Can Attack의 값을 True로 변경한 후 다시 Player를 추격하면서 이러한 행동을 반복한다. Player와 Enemy가 공격하는 모든 방식은 AnimNotifyState (21)로 구현했기 때문에 일부 변수를 제외하고는 같은 방식으로 구현되었다.
+Enemy는 Player가 Player In Range의 범위안에 있다면 Attack Rate의 값을 받아 Delay로 지연시킨 후 해당 시간이 지난 후에 Can Attack의 값을 True로 변경한 후 다시 Player를 추격하면서 이러한 행동을 반복한다. Player와 Enemy가 공격하는 모든 방식은 AnimNotifyState (21)로 구현했기 때문에 일부 변수를 제외하고는 같은 방식으로 구현되었다. 변하는 일부 변수는 공격 범위, Enemy, Player의 Damage와 Get Socket Location에 있는 In Socket Name으로 Enemy나 Player혹은 공격 모션이 있는 모든 Actor의 Skeleton (22)을 이루고 있는 각 관절마다의 이름이 포함된다.
 
 ![Box Trace By Profile](/assets/img/Darwin's-island/Box_Trace_By_Profile.png){:width="1244" height="465" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+
 
 <hr>
 
