@@ -117,6 +117,8 @@ Enemy는 Player가 Player In Range의 범위안에 있다면 Attack Rate의 값�
 ![Anim Notify](/assets/img/Darwin's-island/Anim_Notify.png){:width="1049" height="200" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
 ![Anim Notify 2](/assets/img/Darwin's-island/Anim_Notify_2.png){:width="1210" height="422" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+Content Browser에서 우클릭으로 Animation Montage (26)를 생성하게 되면 Skeleton (28)을 선택하는 창이 나온다. 원하는 Skeleton을 클릭하면 해당 Skeleton Mesh를 가지는 이미지로 Montage (27)가 생성된다. 여기에서 AnimNotifyState로 설정해 주었던 데미지값들이 제대로 적용되게 하려면 공격 모션에 해당하는 (25) 구간에 AnimNotifyState를 설정해 주어야한다.
 <hr>
 
 ### **Reformation**
