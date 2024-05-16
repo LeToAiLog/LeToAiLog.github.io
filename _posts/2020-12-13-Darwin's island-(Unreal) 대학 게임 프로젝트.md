@@ -124,6 +124,10 @@ Content Browser에서 우클릭으로 Animation Montage **<span style="color:red
 
 ![Anim Notify 3](/assets/img/Darwin's-island/Anim_Notify_3.png){:width="600" height="800" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
 
+![Event Any Damage](/assets/img/Darwin's-island/Anim_Notify_3.png){:width="1122" height="495" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+Any Damage (32)를 통해 Apply Damage에서 받아온 정보를 Branch에 넣어준다. IsPlaying은 Damage를 받지 않는 상태에서 True이고 받는 상태면 False의 값을 반환한다. Attack Montage와 마찬가지로 등록해 놓은 getHitMontage를 재생하여 맞는 Animation을 재생하고 OnBlendOut을 통해 Montage의 BlendOut이 시작되고 중단되지 않았을 때 Current Health의 값을 받은 Damage만큼 빼서 저장하게 한다. 만약 Current Health가 0과 같거나 작아지면 Player는 죽는 Montage를 재생하고 UI에서 YOU DIED와 연결된 기능들을 활성화시켜 Actor의 조종을 막는다.
+
 
 <hr>
 
