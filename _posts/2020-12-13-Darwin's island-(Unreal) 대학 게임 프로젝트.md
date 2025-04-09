@@ -128,28 +128,31 @@ Content Browser에서 우클릭으로 Animation Montage **<span style="color:red
 
 Any Damage (32)를 통해 Apply Damage에서 받아온 정보를 Branch에 넣어준다. IsPlaying은 Damage를 받지 않는 상태에서 True이고 받는 상태면 False의 값을 반환한다. Attack Montage와 마찬가지로 등록해 놓은 getHitMontage를 재생하여 맞는 Animation을 재생하고 OnBlendOut을 통해 Montage의 BlendOut이 시작되고 중단되지 않았을 때 Current Health의 값을 받은 Damage만큼 빼서 저장하게 한다. 만약 Current Health가 0과 같거나 작아지면 Player는 죽는 Montage를 재생하고 UI에서 YOU DIED와 연결된 기능들을 활성화시켜 Actor의 조종을 막는다.
 
-
 <hr>
 
-### **Reformation**
+#### **Animation**
 
-1. Server와 연동하여 Client 관리
-2. Business model
-3. Story 추가
-4. 성 내부 구현
-5. 유지, 보수의 효율성을 위한 Code refactoring
-6. UI 개선
-7. 몬스터 추가
-8. Stage 추가
-9. Sound and Effect 추가
+Animation Blueprint는 Animation의 전체적인 로직을 관리한다. 이벤트 그래프 **<span style="color:red;font-size:100%">(2)</span>**에서 Animation이 적용될 Actor를 불러와 Dragon REF에 저장하여 Dragon을 움직이는데 필요한 정보들을 불러온다. Dragon REF는 Animation Blueprint에서 선언한 변수로, 불러올 Actor의 이름을 따와 어떤 Actor의 정보를 불러올지 알기 편하게 해주었다.
 
-등등 추가해야 할 일이 엄청 많았지만 욕심과 적절한 타협을 볼 수 밖에 없는 기간이었다.
+![Animation Blueprint](/assets/img/Darwin's-island/Animation_Blueprint.png){:width="600" height="400" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+State Machine **<span style="color:red;font-size:100%">(3)</span>**은 Idle/Run 정보를 담고 있다. Idle/Run은 Add State로 상태를 추가하여 애니메이션이 시작되는 Entry에서 Idle/Run으로 연결하여 활성화시켜 준다. Movement Cache **<span style="color:red;font-size:100%">(3)</span>**를 사용함으로써 기존에 있던 움직임들을 저장하고 불러온다. DefaultSlot을 통해 Montage로 지정해 놓았던 Animation들을 Cache에 저장되어 있는 Animation과 Blend시켜 사용한다. 이 정보들을 최종 애니메이션 포즈에 연결하여 각 상태에 맞는 Animation을 표현해준다.
+
+![State Machine](/assets/img/Darwin's-island/State_Machine.png){:width="600" height="400" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+
+Idle/Run에서는 **<span style="color:red;font-size:100%">(2)</span>**에서 저장했던 Dragon의 정보 중 움직임의 정보를 받아 Velocity **<span style="color:red;font-size:100%">(5)</span>**에 연결해주어 Actor의 움직임을 감지한다. 이때 움직임은 Chase the Player에서 Player In Range가 True일 때 활성화되면서 애니메이션이 실행되게 된다. Dragon_Anim의 경우 Blend 1D Space **<span style="color:red;font-size:100%">(5)</span>**를 이용하여 가로축의 변화만을 값으로 받아 가로축의 변화를 speed로 두고 Idle상태와 Run상태를 중간지점에서 Blend하여 부드럽게 애니메이션이 전환될 수 있게 해준다. Blend 1D **<span style="color:red;font-size:100%">(6)</span>**는 Content Browser에서 우클릭으로 생성 가능하다.
+
+![Blend 1D](/assets/img/Darwin's-island/Blend_1D.png){:width="600" height="400" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+![Blend 1D](/assets/img/Darwin's-island/Blend_1D_2.png){:width="600" height="400" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"}
+Dragon_Anim은 Blend 1D Space가 만들어진 상태에서 Animation Blueprint **<span style="color:red;font-size:100%">(7)</span>**에서 Drag and Drop으로 추가가 가능하다. 
+
+녹색 점 **<span style="color:red;font-size:100%">(8)</span>**을 기준으로 왼쪽이 Idle상태, 오른쪽이 Run 상태로 Blend를 시켜준다. 상태에 대한 확인은 녹색점을 드래그로 왼쪽, 오른쪽 움직이면서 확인할 수 있다.
+
+Blend 1D Space의 경우 달리기, 서있는 상태를 표현하는데 쓰이고 Blend 2D Space는 달리기, 서있는 상태, 날기 같은 y와 x축 모두 애니메이션에 변화가 있을 때 사용한다. **<span style="color:red;font-size:100%">(9)</span>**에서 **<span style="color:red;font-size:100%">(8)</span>**로 Drag and Drop으로 상태를 추가할 수 있다.
+
+**<span style="color:red;font-size:100%">(8)</span>**에서 표현되는 Speed에 대한 내용으로 속력이 0에 가까우면 서있는 상태에 가까운 애니메이션이 출력되고 350에 가까우면 점점 빨리 달리는 애니메이션으로 출력된다. Speed는 게임에서 실제로 Actor의 달리는 속도이므로 최대 속도가 높으면 최대 속도에 가까울수록 애니메이션 뿐만 아니라 게임내에서도 빨라진다. 다만 애니메이션의 경우 정해진 최대 애니메이션 빠르기를 넘어서지는 못한다.
 
 <hr>
 
 ### **Darwin's island Play Video**
 {% include embed/youtube.html id='wDahpiRtLeA' %}
-<!-- 이미지 -->
-<!-- ![평활 입자 유체역학 커널 그림](/assets/img/smoothed-particle-hydrodynamics/SmoothingKernelFigurewithWhiteBackground.png){:width="500" height="589" style="border:1px solid #eaeaea; border-radius: 10px; padding: 0px;"} 
-_**<span style="color:deepskyblue; font-size:150%">Figure 1. </span>
-<span style="color:gainsboro;font-size:150%">Particle approximation using particles within the particle range(ℎ), 𝑘ℎ is the particle range, $$r_{ij}$$ is the distance between the neighbor particle and the central particle(red).</span>**_ -->
